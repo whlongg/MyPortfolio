@@ -341,6 +341,9 @@ body.lang-transition {
     font-weight: 600;
     margin-bottom: 1rem;
 }
+.skill-name-spacing {
+    margin-top: 20px;
+}
 
 .skill-level {
     background: var(--card-bg);
@@ -525,6 +528,13 @@ footer p { font-size: 0.9rem; }
     .contact-container { padding: 2rem 1.5rem; }
     .skills-grid { grid-template-columns: 1fr; }
     .lang-switch { padding: 0 10px; }
+}
+
+/* Skill logos */
+.skill-logo {
+    width: 50px;
+    height: auto;
+    margin-top: 10px;
 }
 
 /* --- MUSIC WIDGET FIX --- */

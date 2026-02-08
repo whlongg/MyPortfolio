@@ -7,7 +7,9 @@ const langBtn = document.getElementById('lang-toggle');
 const langLabelEn = document.querySelector('.lang-label-en');
 const langLabelVi = document.querySelector('.lang-label-vi');
 
-const savedTheme = localStorage.getItem('theme') || 'dark';
+const STORAGE = { theme: 'theme', lang: 'lang' };
+const CONTACT_EMAIL = 'nhl08.contact@gmail.com';
+const savedTheme = localStorage.getItem(STORAGE.theme) || 'dark';
 html.setAttribute('data-theme', savedTheme);
 updateIcon(savedTheme);
 
@@ -16,7 +18,7 @@ btn.addEventListener('click', () => {
     const next = current === 'light' ? 'dark' : 'light';
 
     html.setAttribute('data-theme', next);
-    localStorage.setItem('theme', next);
+    localStorage.setItem(STORAGE.theme, next);
     updateIcon(next);
 });
 
@@ -133,38 +135,32 @@ const translations = {
     }
 };
 
-let currentLang = localStorage.getItem('lang') || html.getAttribute('lang') || 'vi';
+let currentLang = localStorage.getItem(STORAGE.lang) || html.getAttribute('lang') || 'vi';
 
 function getTranslation(lang, key) {
     return key.split('.').reduce((obj, part) => (obj && obj[part] !== undefined ? obj[part] : null), translations[lang]);
 }
 
 function applyTranslations(lang) {
-    document.querySelectorAll('[data-i18n]').forEach((el) => {
-        const key = el.getAttribute('data-i18n');
-        const value = getTranslation(lang, key);
-        if (value === null) return;
-        const attr = el.getAttribute('data-i18n-attr');
-        if (attr) {
-            el.setAttribute(attr, value);
-        } else {
-            el.textContent = value;
+    document.querySelectorAll('[data-i18n],[data-i18n-title],[data-i18n-alt]').forEach((el) => {
+        const keyText = el.getAttribute('data-i18n');
+        if (keyText) {
+            const value = getTranslation(lang, keyText);
+            if (value !== null) {
+                const attr = el.getAttribute('data-i18n-attr');
+                if (attr) el.setAttribute(attr, value);
+                else el.textContent = value;
+            }
         }
-    });
-
-    document.querySelectorAll('[data-i18n-title]').forEach((el) => {
-        const key = el.getAttribute('data-i18n-title');
-        const value = getTranslation(lang, key);
-        if (value !== null) {
-            el.setAttribute('title', value);
+        const keyTitle = el.getAttribute('data-i18n-title');
+        if (keyTitle) {
+            const value = getTranslation(lang, keyTitle);
+            if (value !== null) el.setAttribute('title', value);
         }
-    });
-
-    document.querySelectorAll('[data-i18n-alt]').forEach((el) => {
-        const key = el.getAttribute('data-i18n-alt');
-        const value = getTranslation(lang, key);
-        if (value !== null) {
-            el.setAttribute('alt', value);
+        const keyAlt = el.getAttribute('data-i18n-alt');
+        if (keyAlt) {
+            const value = getTranslation(lang, keyAlt);
+            if (value !== null) el.setAttribute('alt', value);
         }
     });
 }
@@ -193,7 +189,7 @@ function setLanguage(lang) {
     if (!translations[lang]) return;
     currentLang = lang;
     html.setAttribute('lang', lang);
-    localStorage.setItem('lang', lang);
+    localStorage.setItem(STORAGE.lang, lang);
     applyTranslations(lang);
     updateLangLabel(lang);
     triggerLangTransition();
@@ -219,7 +215,7 @@ window.handleContactSubmit = (event) => {
     const body = bodyTemplate
         .replace('{{email}}', email || '-')
         .replace('{{phone}}', phone || '-');
-    const mailto = `mailto:nhl08.contact@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    const mailto = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     window.location.href = mailto;
 };
 
