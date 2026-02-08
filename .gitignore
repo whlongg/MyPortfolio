@@ -1,0 +1,7 @@
+.trae
+node_modules
+coverage
+tests
+package-lock.json
+package.json
+vitest.config.js

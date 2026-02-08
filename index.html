@@ -4,20 +4,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title data-i18n="meta.title">Portfolio - WHLong</title>
+    <title data-i18n="meta.title">Nguyen Hoang Long | Portfolio</title>
+    <link rel="preconnect" href="https://unpkg.com" crossorigin>
+    <link rel="preconnect" href="https://cdn.pixabay.com" crossorigin>
+    <link rel="dns-prefetch" href="//unpkg.com">
+    <link rel="dns-prefetch" href="//cdn.pixabay.com">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <header>
-        <div class="logo" data-i18n="brand.logo">Portfolio</div>
+        <div class="logo" data-i18n="brand.logo">WHLong</div>
         <nav>
             <ul>
-                <li><a href="#home" data-i18n="nav.home">Trang chủ</a></li>
-                <li><a href="#portfolio" data-i18n="nav.portfolio">Dự án</a></li>
-                <li><a href="#skills" data-i18n="nav.skills">Kỹ năng</a></li>
-                <li><a href="#contact" data-i18n="nav.contact">Liên hệ</a></li>
-                <li>
+                <li><a href="#home" data-i18n="nav.home">Home</a></li>
+                <li><a href="#about" data-i18n="nav.about">About</a></li>
+                <li><a href="#arsenal" data-i18n="nav.arsenal">Arsenal</a></li>
+                <li class="nav-item--secondary"><a href="#projects" data-i18n="nav.projects">Projects</a></li>
+                <li class="nav-item--secondary"><a href="#experience" data-i18n="nav.experience">Experience</a></li>
+                <li class="nav-item--secondary"><a href="#education" data-i18n="nav.education">Education</a></li>
+                <li class="nav-item--secondary"><a href="#contact" data-i18n="nav.contact">Contact</a></li>
+                <li class="nav-item--toggle">
                     <button class="theme-switch" id="theme-toggle" aria-label="Toggle Dark Mode"
                         data-i18n="aria.themeToggle" data-i18n-attr="aria-label">
                         <svg class="sun-icon" style="display:none" xmlns="http://www.w3.org/2000/svg" width="20"
@@ -40,7 +47,7 @@
                         </svg>
                     </button>
                 </li>
-                <li>
+                <li class="nav-item--toggle">
                     <button class="theme-switch lang-switch" id="lang-toggle" aria-label="Toggle Language"
                         data-i18n="aria.langToggle" data-i18n-attr="aria-label">
                         <span class="lang-label-en" style="display:none">EN</span>
@@ -53,79 +60,146 @@
 
     <section class="hero" id="home">
         <div class="hero-content">
-            <h1 data-i18n="hero.title">Crafted with Precision</h1>
-            <p data-i18n="hero.desc">Beautiful, minimal design meets powerful functionality</p>
-            <a href="#portfolio" class="cta-button" data-i18n="hero.cta">Explore My Work</a>
+            <p class="hero-label" data-i18n="hero.role">AI Research Engineer | Backend Developer</p>
+            <h1 class="hero-name" data-i18n="hero.name">Nguyen Hoang Long</h1>
+            <div class="hero-badges">
+                <span class="badge status" data-i18n="hero.status">Available for Freelance & Open Source
+                    Collaboration</span>
+                <span class="badge" data-i18n="hero.location">Hanoi, Vietnam</span>
+            </div>
+            <div class="hero-actions">
+                <a href="#projects" class="cta-button" data-i18n="hero.cta">View Highlights</a>
+                <a href="#contact" class="ghost-button" data-i18n="hero.secondary">Let’s Collaborate</a>
+            </div>
         </div>
     </section>
 
-    <section class="portfolio" id="portfolio">
-        <h2 class="section-title" data-i18n="portfolio.title">Featured Projects</h2>
+    <section class="about" id="about">
+        <h2 class="section-title" data-i18n="about.title">About Me</h2>
+        <p class="section-lead" data-i18n="about.body">I am an AI Researcher and Software Engineer with 4 years of
+            combat experience in the tech trenches. I don't just code; I engage in deep research to solve problems that
+            others deem impossible. My superpower is Nonlinear Learning Speed—I can dive into a completely new domain
+            and master it in record time. I describe myself as Creative, Hardcore, and Competitive. Whether it's
+            competitive programming, security research, or building AGI-level architectures, I play to win and
+            innovate.</p>
+        <p class="section-note" data-i18n="about.note">Fueled by Hardcore Music & Late Night Coding</p>
+    </section>
+
+    <section class="skills" id="arsenal">
+        <h2 class="section-title" data-i18n="arsenal.title">Technical Arsenal</h2>
+        <div class="skills-grid">
+            <div class="skill-card">
+                <div class="skill-name" data-i18n="arsenal.languages.title">Languages</div>
+                <ul class="arsenal-list">
+                    <li data-i18n="arsenal.languages.items.python">Python (Expert)</li>
+                    <li data-i18n="arsenal.languages.items.cpp">C/C++ (Expert)</li>
+                    <li data-i18n="arsenal.languages.items.ts">TypeScript (Advanced)</li>
+                </ul>
+            </div>
+            <div class="skill-card">
+                <div class="skill-name" data-i18n="arsenal.ai.title">AI & Data Science</div>
+                <ul class="arsenal-list">
+                    <li data-i18n="arsenal.ai.items.pytorch">PyTorch (Expert)</li>
+                    <li data-i18n="arsenal.ai.items.vectordb">VectorDB (Expert)</li>
+                    <li data-i18n="arsenal.ai.items.graphdb">GraphDB (Advanced)</li>
+                </ul>
+            </div>
+            <div class="skill-card">
+                <div class="skill-name" data-i18n="arsenal.specialty.title">Specialty</div>
+                <ul class="arsenal-list">
+                    <li data-i18n="arsenal.specialty.items.meta">Metacognitive Architectures</li>
+                    <li data-i18n="arsenal.specialty.items.drug">Drug Repurposing</li>
+                    <li data-i18n="arsenal.specialty.items.rd">R&D</li>
+                </ul>
+            </div>
+            <div class="skill-card">
+                <div class="skill-name" data-i18n="arsenal.backend.title">Backend & Frameworks</div>
+                <ul class="arsenal-list">
+                    <li data-i18n="arsenal.backend.items.fastapi">FastAPI (Master)</li>
+                    <li data-i18n="arsenal.backend.items.django">Django (Expert)</li>
+                    <li data-i18n="arsenal.backend.items.nest">NestJS (Expert)</li>
+                    <li data-i18n="arsenal.backend.items.next">Next.js (Advanced)</li>
+                </ul>
+            </div>
+            <div class="skill-card">
+                <div class="skill-name" data-i18n="arsenal.devops.title">Infrastructure & DevOps</div>
+                <ul class="arsenal-list">
+                    <li data-i18n="arsenal.devops.items.git">Git</li>
+                    <li data-i18n="arsenal.devops.items.cicd">CI/CD</li>
+                    <li data-i18n="arsenal.devops.items.docker">Docker</li>
+                    <li data-i18n="arsenal.devops.items.aws">AWS</li>
+                    <li data-i18n="arsenal.devops.items.k6">K6 (Performance Testing)</li>
+                </ul>
+            </div>
+            <div class="skill-card">
+                <div class="skill-name" data-i18n="arsenal.database.title">Database</div>
+                <ul class="arsenal-list">
+                    <li data-i18n="arsenal.database.items.sql">SQL (PostgreSQL/MariaDB)</li>
+                    <li data-i18n="arsenal.database.items.redis">Redis</li>
+                    <li data-i18n="arsenal.database.items.kafka">Kafka (Event Streaming)</li>
+                    <li data-i18n="arsenal.database.items.mongodb">MongoDB</li>
+                    <li data-i18n="arsenal.database.items.minio">MinIO</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="portfolio" id="projects">
+        <h2 class="section-title" data-i18n="projects.title">Featured Projects (The Highlights)</h2>
         <div class="portfolio-grid">
-            <div class="portfolio-card">
+            <div class="portfolio-card project-card">
                 <div class="portfolio-card-content">
-                    <div class="portfolio-icon">🎨</div>
-                    <h3 data-i18n="portfolio.web.title">Web Design</h3>
-                    <p data-i18n="portfolio.web.desc">Minimal, elegant interfaces with focus on user experience and
-                        clean aesthetics.</p>
-                    <div><span class="portfolio-tag" data-i18n="tags.html">HTML</span><span class="portfolio-tag"
-                            data-i18n="tags.css">CSS</span><span class="portfolio-tag"
-                            data-i18n="tags.design">Design</span></div>
+                    <h3 data-i18n="projects.biomind.title">BioMind-DR: Biomedical Metacognitive Intelligence</h3>
+                    <p class="project-subtitle" data-i18n="projects.biomind.subtitle">The Magnum Opus. A system that
+                        mimics the human brain to cure diseases.</p>
+                    <p class="project-meta" data-i18n="projects.biomind.role">Role: Project Leader & Lead Researcher (1
+                        Year)</p>
+                    <p class="project-meta" data-i18n="projects.biomind.problem">The Problem: Traditional drug
+                        repurposing is slow and disconnected. We needed a system that doesn't just "search" but "thinks"
+                        and verifies hypotheses like a scientist.</p>
+                    <p class="project-meta" data-i18n="projects.biomind.solution.title">The Solution: Built a
+                        Leader-Expert-Council Multi-Agent System based on Metacognitive Memory Architecture (simulating
+                        Hippocampus & Neocortex).</p>
+                    <ul class="project-list">
+                        <li data-i18n="projects.biomind.solution.fast">Fast System (Hippocampus): L0 Working Memory
+                            (Redis) & L1 Episodic Buffer (Kafka) for real-time context and event streaming.</li>
+                        <li data-i18n="projects.biomind.solution.slow">Slow System (Neocortex): L2 Knowledge Core
+                            powered
+                            by KuzuDB.</li>
+                        <li data-i18n="projects.biomind.solution.bitemporal">Bi-temporal Graph: Tracks validity of
+                            knowledge over history.</li>
+                        <li data-i18n="projects.biomind.solution.evidence">Evidence Graph: Isolates conflicting data for
+                            the Council Agent to adjudicate.</li>
+                        <li data-i18n="projects.biomind.solution.consolidation">Memory Consolidation: L3 Strategy
+                            (MariaDB) & L4 Long-term Storage (MinIO) allow the system to learn from past inferences.
+                        </li>
+                    </ul>
+                    <p class="project-meta" data-i18n="projects.biomind.impact.title">Impact & Result:</p>
+                    <ul class="project-list">
+                        <li data-i18n="projects.biomind.impact.sota">Outperformed SOTA models: Achieved 48.2% on HLE and
+                            94.7% on MRCR v2, beating Gemini 3.0 Pro and GPT-5.1 in biomedical reasoning tasks.</li>
+                        <li data-i18n="projects.biomind.impact.drylab">Integrated a virtual dry-lab for hypothesis
+                            verification.</li>
+                    </ul>
+                    <p class="project-meta" data-i18n="projects.biomind.stack">Tech Stack: Python, PyTorch, KuzuDB,
+                        Kafka, Redis, MariaDB, MinIO.</p>
+                    <a class="project-link" href="https://biomind-dr.whlong.dev/" target="_blank" rel="noopener"
+                        data-i18n="projects.biomind.link">Link: Live Demo</a>
                 </div>
             </div>
-            <div class="portfolio-card">
+            <div class="portfolio-card project-card">
                 <div class="portfolio-card-content">
-                    <div class="portfolio-icon">⚛️</div>
-                    <h3 data-i18n="portfolio.react.title">React App</h3>
-                    <p data-i18n="portfolio.react.desc">Modern React applications with state management, routing and
-                        seamless API integration.</p>
-                    <div><span class="portfolio-tag" data-i18n="tags.react">React</span><span class="portfolio-tag"
-                            data-i18n="tags.javascript">JavaScript</span><span class="portfolio-tag"
-                            data-i18n="tags.api">API</span></div>
-                </div>
-            </div>
-            <div class="portfolio-card">
-                <div class="portfolio-card-content">
-                    <div class="portfolio-icon">🗄️</div>
-                    <h3 data-i18n="portfolio.backend.title">Backend API</h3>
-                    <p data-i18n="portfolio.backend.desc">Robust RESTful APIs with user authentication and comprehensive
-                        database management.</p>
-                    <div><span class="portfolio-tag" data-i18n="tags.node">Node.js</span><span class="portfolio-tag"
-                            data-i18n="tags.mongo">MongoDB</span><span class="portfolio-tag"
-                            data-i18n="tags.express">Express</span></div>
-                </div>
-            </div>
-            <div class="portfolio-card">
-                <div class="portfolio-card-content">
-                    <div class="portfolio-icon">📱</div>
-                    <h3 data-i18n="portfolio.mobile.title">Mobile App</h3>
-                    <p data-i18n="portfolio.mobile.desc">Responsive mobile applications optimized for all screen sizes
-                        and devices.</p>
-                    <div><span class="portfolio-tag" data-i18n="tags.reactNative">React Native</span><span
-                            class="portfolio-tag" data-i18n="tags.firebase">Firebase</span><span class="portfolio-tag"
-                            data-i18n="tags.mobile">Mobile</span></div>
-                </div>
-            </div>
-            <div class="portfolio-card">
-                <div class="portfolio-card-content">
-                    <div class="portfolio-icon">🔐</div>
-                    <h3 data-i18n="portfolio.ecommerce.title">E-Commerce</h3>
-                    <p data-i18n="portfolio.ecommerce.desc">Secure e-commerce platforms with integrated payment systems
-                        and inventory management.</p>
-                    <div><span class="portfolio-tag" data-i18n="tags.fullStack">Full Stack</span><span
-                            class="portfolio-tag" data-i18n="tags.payment">Payment</span><span class="portfolio-tag"
-                            data-i18n="tags.security">Security</span></div>
-                </div>
-            </div>
-            <div class="portfolio-card">
-                <div class="portfolio-card-content">
-                    <div class="portfolio-icon">📊</div>
-                    <h3 data-i18n="portfolio.dashboard.title">Dashboard Analytics</h3>
-                    <p data-i18n="portfolio.dashboard.desc">Real-time analytics dashboards with interactive charts and
-                        data visualization.</p>
-                    <div><span class="portfolio-tag" data-i18n="tags.dataViz">Data Viz</span><span class="portfolio-tag"
-                            data-i18n="tags.chartjs">Chart.js</span><span class="portfolio-tag"
-                            data-i18n="tags.analytics">Analytics</span></div>
+                    <h3 data-i18n="projects.pulsar.title">PulsarPath: Next-Gen Personalized Education AI</h3>
+                    <p class="project-subtitle" data-i18n="projects.pulsar.subtitle">Redefining how we learn.</p>
+                    <p class="project-meta" data-i18n="projects.pulsar.role">Role: Solo Developer (3 Months - Closed
+                        Beta)</p>
+                    <p class="project-meta" data-i18n="projects.pulsar.concept">Concept: An AI-driven platform that
+                        analyzes individual thinking patterns to generate hyper-personalized learning roadmaps. It
+                        optimizes for the user's specific cognitive style to maximize learning efficiency.</p>
+                    <p class="project-meta" data-i18n="projects.pulsar.stack">Tech Stack: Next.js, NestJS, AI Analytics
+                        Engine.</p>
+                    <a class="project-link" href="https://pulsarpath.dev" target="_blank" rel="noopener"
+                        data-i18n="projects.pulsar.link">Link: pulsarpath.dev</a>
                 </div>
             </div>
         </div>
@@ -133,77 +207,84 @@
 
     <div class="parallax-divider">
         <div class="parallax-text">
-            <span data-i18n="quote">"Design is not just what it looks like and feels like. Design is how it
-                works."</span>
+            <span data-i18n="quote">"Redefining limits with Nonlinear Learning & Metacognitive AI."</span>
         </div>
     </div>
 
-    <section class="skills" id="skills">
-        <h2 class="section-title" data-i18n="skills.title">Core Skills</h2>
-        <div class="skills-grid">
-            <div class="skill-card">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/6/62/CSS3_logo.svg" alt="CSS3"
-                    data-i18n-alt="skills.alt.css3" class="skill-logo">
-                <div class="skill-level">
-                    <div class="skill-progress skill-95"></div>
-                </div>
+    <section class="experience" id="experience">
+        <h2 class="section-title" data-i18n="experience.title">Work Experience</h2>
+        <div class="timeline">
+            <div class="timeline-item">
+                <h3 data-i18n="experience.vnoi.title">VNOI (Vietnam Olympiad in Informatics) | Tech Team Member</h3>
+                <p class="timeline-period" data-i18n="experience.vnoi.period">Sep 2025 - Present</p>
+                <ul class="timeline-list">
+                    <li data-i18n="experience.vnoi.desc1">Responsible for maintaining and optimizing the VNOI Online
+                        Judge (VOJ) system (oj.vnoi.info).</li>
+                    <li data-i18n="experience.vnoi.desc2">Ensuring system stability, fixing critical bugs, and improving
+                        performance for thousands of competitive programmers.</li>
+                </ul>
             </div>
-            <div class="skill-card">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" alt="JS"
-                    data-i18n-alt="skills.alt.js" class="skill-logo">
-                <div class="skill-level">
-                    <div class="skill-progress skill-90"></div>
-                </div>
+        </div>
+    </section>
+
+    <section class="education" id="education">
+        <h2 class="section-title" data-i18n="education.title">Education & Achievements</h2>
+        <div class="education-grid">
+            <div class="education-card">
+                <h3 data-i18n="education.school.title">Le Hong Phong High School</h3>
+                <p class="education-period" data-i18n="education.school.period">2023 - 2026</p>
+                <p class="education-focus" data-i18n="education.school.focus">Focus: Computer Science & AI.</p>
             </div>
-            <div class="skill-card">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" alt="React"
-                    data-i18n-alt="skills.alt.react" class="skill-logo">
-                <div class="skill-level">
-                    <div class="skill-progress skill-85"></div>
-                </div>
-            </div>
-            <div class="skill-card">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg" alt="Node"
-                    data-i18n-alt="skills.alt.node" class="skill-logo">
-                <div class="skill-level">
-                    <div class="skill-progress skill-80"></div>
-                </div>
-            </div>
-            <div class="skill-card">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/9/93/MongoDB_Logo.svg" alt="Mongo"
-                    data-i18n-alt="skills.alt.mongo" class="skill-logo">
-                <div class="skill-level">
-                    <div class="skill-progress skill-80"></div>
-                </div>
-            </div>
-            <div class="skill-card">
-                <div class="skill-name skill-name-spacing" data-i18n="skills.uiux">UI/UX Design</div>
-                <div class="skill-level">
-                    <div class="skill-progress skill-85"></div>
-                </div>
+            <div class="education-card">
+                <h3 data-i18n="education.honors.title">Honors & Awards</h3>
+                <ul class="education-list">
+                    <li data-i18n="education.honors.items.cp">Top 2% Competitive Programming in Vietnam (Age Group).
+                    </li>
+                    <li data-i18n="education.honors.items.sef">Top 10% National Science & Engineering Fair in Vietnam.
+                    </li>
+                    <li data-i18n="education.honors.items.security">Security Research: Reported critical vulnerabilities
+                        to EdTech platforms (Edubit/Unica, Eduquiz) affecting ~700k users.</li>
+                    <li data-i18n="education.honors.items.oss">Open Source: Contributor to Letta, VNOI and Hetio.</li>
+                </ul>
             </div>
         </div>
     </section>
 
     <section class="contact" id="contact">
         <div class="contact-container">
-            <h2 class="section-title" data-i18n="contact.title">Get In Touch</h2>
-            <p style="color: var(--text-sub); margin-bottom: 2rem;" data-i18n="contact.desc">Let's create something
-                amazing together.</p>
-
-            <form class="contact-form" onsubmit="handleContactSubmit(event);">
-                <div class="input-group">
-                    <input id="contactEmail" name="email" type="email" class="form-input" placeholder="Your email"
-                        required data-i18n="contact.email.placeholder" data-i18n-attr="placeholder">
-                </div>
-                <div class="input-group">
-                    <input id="contactPhone" name="phone" type="tel" class="form-input" placeholder="Your phone number"
-                        pattern="[0-9]{10}" title="Please enter a valid 10-digit phone number" required
-                        data-i18n="contact.phone.placeholder" data-i18n-attr="placeholder"
-                        data-i18n-title="contact.phone.title">
-                </div>
-                <button type="submit" class="submit-btn" data-i18n="contact.submit">Send Message</button>
-            </form>
+            <h2 class="section-title" data-i18n="contact.title">Contact</h2>
+            <p class="section-lead" data-i18n="contact.desc">Have a crazy idea? Let's break the limits together.</p>
+            <div class="contact-list">
+                <a href="mailto:nhl08.contact@gmail.com" class="contact-card">
+                    <span class="contact-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M4 6h16a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2z" />
+                            <path d="m22 8-10 6L2 8" />
+                        </svg>
+                    </span>
+                    <span class="contact-text" data-i18n="contact.email.card">nhl08.contact@gmail.com</span>
+                </a>
+                <a href="tel:+84965940805" class="contact-card">
+                    <span class="contact-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path
+                                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.07-8.63A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.86.31 1.7.57 2.5a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.58-1.14a2 2 0 0 1 2.11-.45c.8.26 1.64.45 2.5.57a2 2 0 0 1 1.72 2z" />
+                        </svg>
+                    </span>
+                    <span class="contact-text" data-i18n="contact.phone.card">(+84) 965 940 805</span>
+                </a>
+                <a href="https://github.com/whlongg" class="contact-card" target="_blank" rel="noopener">
+                    <span class="contact-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                        </svg>
+                    </span>
+                    <span class="contact-text" data-i18n="contact.github.card">GitHub</span>
+                </a>
+            </div>
         </div>
     </section>
 
@@ -224,7 +305,7 @@
                 </svg>
             </a>
         </div>
-        <p data-i18n="footer.copy">&copy; 2025 Portfolio. Tất cả quyền được bảo lưu.</p>
+        <p data-i18n="footer.copy">&copy; 2025 Nguyen Hoang Long. All rights reserved.</p>
     </footer>
 
     <div class="music-widget">
@@ -248,10 +329,11 @@
         </div>
         <audio id="audioPlayer"
             src="https://cdn.pixabay.com/download/audio/2022/05/27/audio_1808fbf07a.mp3?filename=lofi-study-112191.mp3"
-            loop preload="auto"></audio>
+            loop preload="metadata"></audio>
     </div>
 
     <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+    <script src="translations.js"></script>
     <script src="script.js"></script>
 </body>
 
