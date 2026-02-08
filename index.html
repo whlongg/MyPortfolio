@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="vi" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="meta.title">Portfolio - AstrelixDev</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo" data-i18n="brand.logo">Portfolio</div>
+        <nav>
+            <ul>
+                <li><a href="#home" data-i18n="nav.home">Trang chủ</a></li>
+                <li><a href="#portfolio" data-i18n="nav.portfolio">Dự án</a></li>
+                <li><a href="#skills" data-i18n="nav.skills">Kỹ năng</a></li>
+                <li><a href="#contact" data-i18n="nav.contact">Liên hệ</a></li>
+                <li>
+                    <button class="theme-switch" id="theme-toggle" aria-label="Toggle Dark Mode"
+                        data-i18n="aria.themeToggle" data-i18n-attr="aria-label">
+                        <svg class="sun-icon" style="display:none" xmlns="http://www.w3.org/2000/svg" width="20"
+                            height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="5"></circle>
+                            <line x1="12" y1="1" x2="12" y2="3"></line>
+                            <line x1="12" y1="21" x2="12" y2="23"></line>
+                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                            <line x1="1" y1="12" x2="3" y2="12"></line>
+                            <line x1="21" y1="12" x2="23" y2="12"></line>
+                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                        </svg>
+                        <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                        </svg>
+                    </button>
+                </li>
+                <li>
+                    <button class="theme-switch lang-switch" id="lang-toggle" aria-label="Toggle Language"
+                        data-i18n="aria.langToggle" data-i18n-attr="aria-label">
+                        <span class="lang-label-en" style="display:none">EN</span>
+                        <span class="lang-label-vi">VI</span>
+                    </button>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1 data-i18n="hero.title">Crafted with Precision</h1>
+            <p data-i18n="hero.desc">Beautiful, minimal design meets powerful functionality</p>
+            <a href="#portfolio" class="cta-button" data-i18n="hero.cta">Explore My Work</a>
+        </div>
+    </section>
+
+    <section class="portfolio" id="portfolio">
+        <h2 class="section-title" data-i18n="portfolio.title">Featured Projects</h2>
+        <div class="portfolio-grid">
+            <div class="portfolio-card">
+                <div class="portfolio-card-content">
+                    <div class="portfolio-icon">🎨</div>
+                    <h3 data-i18n="portfolio.web.title">Web Design</h3>
+                    <p data-i18n="portfolio.web.desc">Minimal, elegant interfaces with focus on user experience and
+                        clean aesthetics.</p>
+                    <div><span class="portfolio-tag" data-i18n="tags.html">HTML</span><span class="portfolio-tag"
+                            data-i18n="tags.css">CSS</span><span class="portfolio-tag"
+                            data-i18n="tags.design">Design</span></div>
+                </div>
+            </div>
+            <div class="portfolio-card">
+                <div class="portfolio-card-content">
+                    <div class="portfolio-icon">⚛️</div>
+                    <h3 data-i18n="portfolio.react.title">React App</h3>
+                    <p data-i18n="portfolio.react.desc">Modern React applications with state management, routing and
+                        seamless API integration.</p>
+                    <div><span class="portfolio-tag" data-i18n="tags.react">React</span><span class="portfolio-tag"
+                            data-i18n="tags.javascript">JavaScript</span><span class="portfolio-tag"
+                            data-i18n="tags.api">API</span></div>
+                </div>
+            </div>
+            <div class="portfolio-card">
+                <div class="portfolio-card-content">
+                    <div class="portfolio-icon">🗄️</div>
+                    <h3 data-i18n="portfolio.backend.title">Backend API</h3>
+                    <p data-i18n="portfolio.backend.desc">Robust RESTful APIs with user authentication and comprehensive
+                        database management.</p>
+                    <div><span class="portfolio-tag" data-i18n="tags.node">Node.js</span><span class="portfolio-tag"
+                            data-i18n="tags.mongo">MongoDB</span><span class="portfolio-tag"
+                            data-i18n="tags.express">Express</span></div>
+                </div>
+            </div>
+            <div class="portfolio-card">
+                <div class="portfolio-card-content">
+                    <div class="portfolio-icon">📱</div>
+                    <h3 data-i18n="portfolio.mobile.title">Mobile App</h3>
+                    <p data-i18n="portfolio.mobile.desc">Responsive mobile applications optimized for all screen sizes
+                        and devices.</p>
+                    <div><span class="portfolio-tag" data-i18n="tags.reactNative">React Native</span><span
+                            class="portfolio-tag" data-i18n="tags.firebase">Firebase</span><span class="portfolio-tag"
+                            data-i18n="tags.mobile">Mobile</span></div>
+                </div>
+            </div>
+            <div class="portfolio-card">
+                <div class="portfolio-card-content">
+                    <div class="portfolio-icon">🔐</div>
+                    <h3 data-i18n="portfolio.ecommerce.title">E-Commerce</h3>
+                    <p data-i18n="portfolio.ecommerce.desc">Secure e-commerce platforms with integrated payment systems
+                        and inventory management.</p>
+                    <div><span class="portfolio-tag" data-i18n="tags.fullStack">Full Stack</span><span
+                            class="portfolio-tag" data-i18n="tags.payment">Payment</span><span class="portfolio-tag"
+                            data-i18n="tags.security">Security</span></div>
+                </div>
+            </div>
+            <div class="portfolio-card">
+                <div class="portfolio-card-content">
+                    <div class="portfolio-icon">📊</div>
+                    <h3 data-i18n="portfolio.dashboard.title">Dashboard Analytics</h3>
+                    <p data-i18n="portfolio.dashboard.desc">Real-time analytics dashboards with interactive charts and
+                        data visualization.</p>
+                    <div><span class="portfolio-tag" data-i18n="tags.dataViz">Data Viz</span><span class="portfolio-tag"
+                            data-i18n="tags.chartjs">Chart.js</span><span class="portfolio-tag"
+                            data-i18n="tags.analytics">Analytics</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="parallax-divider">
+        <div class="parallax-text">
+            <span data-i18n="quote">"Design is not just what it looks like and feels like. Design is how it
+                works."</span>
+        </div>
+    </div>
+
+    <section class="skills" id="skills">
+        <h2 class="section-title" data-i18n="skills.title">Core Skills</h2>
+        <div class="skills-grid">
+            <div class="skill-card">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/62/CSS3_logo.svg" alt="CSS3"
+                    data-i18n-alt="skills.alt.css3" style="width:50px; height:auto; margin-top:10px;">
+                <div class="skill-level">
+                    <div class="skill-progress skill-95"></div>
+                </div>
+            </div>
+            <div class="skill-card">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" alt="JS"
+                    data-i18n-alt="skills.alt.js" style="width:50px; height:auto; margin-top:10px;">
+                <div class="skill-level">
+                    <div class="skill-progress skill-90"></div>
+                </div>
+            </div>
+            <div class="skill-card">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" alt="React"
+                    data-i18n-alt="skills.alt.react" style="width:50px; height:auto; margin-top:10px;">
+                <div class="skill-level">
+                    <div class="skill-progress skill-85"></div>
+                </div>
+            </div>
+            <div class="skill-card">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg" alt="Node"
+                    data-i18n-alt="skills.alt.node" style="width:50px; height:auto; margin-top:10px;">
+                <div class="skill-level">
+                    <div class="skill-progress skill-80"></div>
+                </div>
+            </div>
+            <div class="skill-card">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/9/93/MongoDB_Logo.svg" alt="Mongo"
+                    data-i18n-alt="skills.alt.mongo" style="width:50px; height:auto; margin-top:10px;">
+                <div class="skill-level">
+                    <div class="skill-progress skill-80"></div>
+                </div>
+            </div>
+            <div class="skill-card">
+                <div class="skill-name" style="margin-top:20px" data-i18n="skills.uiux">UI/UX Design</div>
+                <div class="skill-level">
+                    <div class="skill-progress skill-85"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <div class="contact-container">
+            <h2 class="section-title" data-i18n="contact.title">Get In Touch</h2>
+            <p style="color: var(--text-sub); margin-bottom: 2rem;" data-i18n="contact.desc">Let's create something
+                amazing together.</p>
+
+            <form class="contact-form" onsubmit="handleContactSubmit(event);">
+                <div class="input-group">
+                    <input type="email" class="form-input" placeholder="Your email" required
+                        data-i18n="contact.email.placeholder" data-i18n-attr="placeholder">
+                </div>
+                <div class="input-group">
+                    <input type="tel" class="form-input" placeholder="Your phone number" pattern="[0-9]{10}"
+                        title="Please enter a valid 10-digit phone number" required
+                        data-i18n="contact.phone.placeholder" data-i18n-attr="placeholder"
+                        data-i18n-title="contact.phone.title">
+                </div>
+                <button type="submit" class="submit-btn" data-i18n="contact.submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="social-links">
+            <a href="https://github.com/whlongg" class="social-link" aria-label="GitHub" data-i18n="aria.github"
+                data-i18n-attr="aria-label">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path
+                        d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                </svg>
+            </a>
+            <a href="mailto:nhl08.contact@gmail.com" class="social-link" aria-label="Email" data-i18n="aria.email"
+                data-i18n-attr="aria-label">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path
+                        d="M0 3v18h24v-18h-24zm21.518 2l-9.518 7.713-9.518-7.713h19.036zm-19.518 14v-11.817l10 8.104 10-8.104v11.817h-20z" />
+                </svg>
+            </a>
+        </div>
+        <p data-i18n="footer.copy">&copy; 2025 Portfolio. Tất cả quyền được bảo lưu.</p>
+    </footer>
+
+    <div class="music-widget">
+        <div class="music-disc" id="musicDisc">
+            <div class="music-center"></div>
+        </div>
+        <div class="music-info">
+            <div class="song-title" data-i18n="music.title">Coding Mode: ON</div>
+            <div class="artist-name" data-i18n="music.artist">Chill Lofi Beats</div>
+        </div>
+        <div class="music-controls">
+            <button id="playBtn" class="control-btn" aria-label="Play/Pause Music" data-i18n="aria.playPause"
+                data-i18n-attr="aria-label">
+                <svg class="play-icon" viewBox="0 0 24 24" width="24" height="24">
+                    <path fill="currentColor" d="M8 5v14l11-7z" />
+                </svg>
+                <svg class="pause-icon" viewBox="0 0 24 24" width="24" height="24" style="display:none">
+                    <path fill="currentColor" d="M6 19h4V5H6v14zm8-14v14h4V5h-4z" />
+                </svg>
+            </button>
+        </div>
+        <audio id="audioPlayer"
+            src="https://cdn.pixabay.com/download/audio/2022/05/27/audio_1808fbf07a.mp3?filename=lofi-study-112191.mp3"
+            loop preload="auto"></audio>
+    </div>
+
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
