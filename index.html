@@ -193,12 +193,12 @@
 
             <form class="contact-form" onsubmit="handleContactSubmit(event);">
                 <div class="input-group">
-                    <input type="email" class="form-input" placeholder="Your email" required
-                        data-i18n="contact.email.placeholder" data-i18n-attr="placeholder">
+                    <input id="contactEmail" name="email" type="email" class="form-input" placeholder="Your email"
+                        required data-i18n="contact.email.placeholder" data-i18n-attr="placeholder">
                 </div>
                 <div class="input-group">
-                    <input type="tel" class="form-input" placeholder="Your phone number" pattern="[0-9]{10}"
-                        title="Please enter a valid 10-digit phone number" required
+                    <input id="contactPhone" name="phone" type="tel" class="form-input" placeholder="Your phone number"
+                        pattern="[0-9]{10}" title="Please enter a valid 10-digit phone number" required
                         data-i18n="contact.phone.placeholder" data-i18n-attr="placeholder"
                         data-i18n-title="contact.phone.title">
                 </div>

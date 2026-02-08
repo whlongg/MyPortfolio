@@ -61,7 +61,9 @@ const translations = {
             email: { placeholder: 'Email của bạn' },
             phone: { placeholder: 'Số điện thoại của bạn', title: 'Vui lòng nhập số điện thoại hợp lệ 10 chữ số' },
             submit: 'Gửi tin nhắn',
-            alert: 'Cảm ơn bro! Thông tin đã được gửi (Giả lập).'
+            alert: 'Cảm ơn bro! Thông tin đã được gửi (Giả lập).',
+            mailSubject: 'Liên hệ từ Portfolio',
+            mailBody: 'Email: {{email}}\nSĐT: {{phone}}'
         },
         footer: { copy: '© 2025 Portfolio. Tất cả quyền được bảo lưu.' },
         music: { title: 'Chế độ code: BẬT', artist: 'Chill Lofi Beats' },
@@ -109,7 +111,9 @@ const translations = {
             email: { placeholder: 'Your email' },
             phone: { placeholder: 'Your phone number', title: 'Please enter a valid 10-digit phone number' },
             submit: 'Send Message',
-            alert: 'Thanks! Your info has been sent (Simulated).'
+            alert: 'Thanks! Your info has been sent (Simulated).',
+            mailSubject: 'Portfolio Contact',
+            mailBody: 'Email: {{email}}\nPhone: {{phone}}'
         },
         footer: { copy: '© 2025 Portfolio. All rights reserved.' },
         music: { title: 'Coding Mode: ON', artist: 'Chill Lofi Beats' },
@@ -206,8 +210,17 @@ if (langBtn) {
 
 window.handleContactSubmit = (event) => {
     event.preventDefault();
-    const message = getTranslation(currentLang, 'contact.alert');
-    alert(message || 'Thanks!');
+    const emailInput = document.getElementById('contactEmail');
+    const phoneInput = document.getElementById('contactPhone');
+    const email = emailInput ? emailInput.value.trim() : '';
+    const phone = phoneInput ? phoneInput.value.trim() : '';
+    const subject = getTranslation(currentLang, 'contact.mailSubject') || 'Portfolio Contact';
+    const bodyTemplate = getTranslation(currentLang, 'contact.mailBody') || 'Email: {{email}}\nPhone: {{phone}}';
+    const body = bodyTemplate
+        .replace('{{email}}', email || '-')
+        .replace('{{phone}}', phone || '-');
+    const mailto = `mailto:nhl08.contact@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    window.location.href = mailto;
 };
 
 // 2. Lenis Smooth Scroll
