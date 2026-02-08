@@ -7,7 +7,7 @@ const langBtn = document.getElementById('lang-toggle');
 const langLabelEn = document.querySelector('.lang-label-en');
 const langLabelVi = document.querySelector('.lang-label-vi');
 
-const savedTheme = localStorage.getItem('theme') || 'light';
+const savedTheme = localStorage.getItem('theme') || 'dark';
 html.setAttribute('data-theme', savedTheme);
 updateIcon(savedTheme);
 
